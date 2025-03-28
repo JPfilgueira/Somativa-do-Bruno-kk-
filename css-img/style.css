@@ -1,0 +1,159 @@
+/* HEADER */
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    cursor: progress;
+}
+
+:root {
+    --cinza-preto: rgb(10, 10, 10);
+    --cinza: rgba(128, 128, 128, 0.507);
+    --cinza-escuro: rgb(44, 44, 44);
+    --cinza-translucido: rgba(255, 255, 255, 0.164);
+    --azul: rgb(0, 0, 85);
+    --azul-preto: rgb(0, 0, 54);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-escuro);
+}
+
+/* INÍCIO DO HEADER */
+header {
+    background-color: var(--cinza);
+    height: 75px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+    margin-bottom: 250px;
+}
+
+/* METADE DO CÍRCULO */
+.half-circle {
+    width: 400px; /* Largura do círculo */
+    height: 200px; /* Metade da altura do círculo */
+    background-color: var(--cinza-preto); /* Cor de fundo */
+    border-radius: 0 0 200px 200px; /* Arredonda apenas as bordas inferiores */
+    position: absolute; /* Fixar a posição na tela */
+    top: 0; /* Coloca o círculo no topo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição horizontal para o centro */
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente o conteúdo interno */
+    align-items: center; /* Alinha verticalmente o conteúdo interno */
+}
+
+.inicio {
+    margin-bottom: 75px;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+    opacity: 0;
+    animation: fadeIn 8s forwards;
+    text-decoration: none;
+    text-shadow: 
+    0 0 5px white, 
+      0 0 10px black,
+        0 0 15px white,
+          0 0 20px white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* FIM DO HEADER */
+
+
+
+
+
+/* INÍCIO DO MAIN */
+.produto {
+    background-color: var(--cinza);
+    display: inline-block;
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: 1s;
+    margin: 0px 25px 50px;
+    width: 332px;
+}
+
+.produto:hover {
+    transform: translateY(-25px);
+    background-color: var(--azul);
+}
+
+.produto:active {
+    background-color: var(--cinza-preto);
+}
+
+.imgProduto {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.descricao {
+    background-color: blue;
+    border-radius: 5px 0px;
+    padding: 7px;
+    border: 0px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: 1s;
+    letter-spacing: 5px;
+    transform: skewX(-10deg);
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.produtos {
+    text-align: center;
+}
+/* FIM DO MAIN */
+
+
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    padding: 10px 0px;
+    background-color: var(--cinza-translucido);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+.descricaoFooter {
+    background-color: var(--azul);
+    border-radius: 5px 0px;
+    padding: 7px;
+    border: 0px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: 1s;
+    letter-spacing: 5px;
+    transform: skewX(-10deg);
+    width: 474px;
+    margin: 0 auto;
+}
+/* FIM DO FOOTER */
